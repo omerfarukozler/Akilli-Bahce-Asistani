@@ -2,6 +2,9 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
 import './App.css';
 import HomePage from './HomePage'; // Yeni bileşeni içe aktar
+import PlantCare from './PlantCare';
+import PlantIdentification from './PlantIdentification';
+import DiseaseDiagnosis from './DiseaseDiagnosis';
 
 function App() {
   return (
@@ -10,6 +13,9 @@ function App() {
         <Routes>
           <Route path="/" element={<MainPage />} />
           <Route path="/home" element={<HomePage />} />
+          <Route path="/plant-care" element={<PlantCare />} />
+          <Route path="/plant-identification" element={<PlantIdentification />} />
+          <Route path="/disease-diagnosis" element={<DiseaseDiagnosis />} />
         </Routes>
       </div>
     </Router>
@@ -33,6 +39,4 @@ function MainPage() {
 }
 
 export default App;
-
-
 

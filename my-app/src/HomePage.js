@@ -1,19 +1,47 @@
-// src/HomePage.js
+// HomePage.js
 import React from 'react';
 
 function HomePage() {
+  const handleNavigate = (path) => {
+    const fullUrl = `${window.location.origin}${path}`;
+    window.open(fullUrl, '_blank');
+  };
+
   return (
-    <div>
-      <button style={{margin:'250px 15px'}} className="animated-button" >Bitki Bakımı</button>
-      <button className="animated-button" >Bitki Tanıma</button>
-      <button className="animated-button">Hastalık Teşhisi</button>
-      <button className="animated-button">Sulama ve Gübreleme </button>
-      {
+    <div className="container ">
+      <div className="row d-flex justify-content-center align-items-center vh-100">
+        <div className="col">
+        <button
+        className="animated-button-plant"
+        onClick={() => handleNavigate('/plant-care')}
+      >
+        Bitki Bakımı
+      </button>
+        </div>
+        <div className="col">
+        <button
+        className="animated-button-plant"
+        onClick={() => handleNavigate('/plant-identification')}
+      >
+        Bitki Tanıma
+      </button>
+        </div>
+        <div className="col">
+        <button
+        className="animated-button-plant"
+        onClick={() => handleNavigate('/disease-diagnosis')}
+      >
+        Hastalık Teşhisi
+      </button>
+        </div>
       
-      }
+      </div>
+      
     </div>
   );
 }
 
 export default HomePage;
+
+
 

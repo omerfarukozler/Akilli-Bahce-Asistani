@@ -64,3 +64,21 @@ h1{
 .btn-secondary btn-lg{
   margin-left: 40px;
 }
+.animated-button-plant{
+  height: 100px;
+  margin-left: 40px;
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  background-color: #282b28;
+  color: white;
+  cursor: pointer;
+  opacity: 0; /* Başlangıçta buton görünmez */
+  animation: fadeIn 4s forwards; /* Yavaşça belirginleşme */
+  transition: transform 0.3s ease-in-out; /* Hover geçişi için */
+}
+.animated-button-plant:hover {
+  animation: buttonHover 0.3s forwards;
+}
